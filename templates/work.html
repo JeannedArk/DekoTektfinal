@@ -1,0 +1,197 @@
+{% extends '_base.html' %}
+{% load static %}
+
+
+{% block content %}
+		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+			<div class="colorlib-footer">
+				
+				
+			</div>
+			<br>
+			<h1 id="colorlib-logo"><a href="{% url 'home' %}"> <img width="150px" height="75px" src="{% static 'images/DekoTektlogo.png' %}" alt=""> </a></h1>
+			
+			<nav id="colorlib-main-menu" role="navigation">
+				
+				<ul>
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href="{% url 'services' %}">Services</a></li>
+					<li class="colorlib-active"><a href="{% url 'work' %}">Projects</a></li>
+					<li><a href="{% url 'about' %}">About</a></li>										
+					<li><a href="{% url 'contact' %}">Contact</a></li>
+				</ul>
+				
+			</nav>			
+			<div class="colorlib-footer">
+				<ul class="list-inline text-center">
+					<li ><a href="#"><i style="height: 100px; width: 50px;" class="icon-facebook2"></i></a></li>
+					<li><a href="#"><i class="icon-youtube"></i></a></li>					
+					<li><a href="#"><i class="icon-instagram"></i></a></li>					
+					
+				</ul>
+			</div>
+		</aside>
+		<div id="colorlib-main">
+			<div class="colorlib-work">
+
+				<div class="colorlib-narrow-content">
+
+					<div class="row">						
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">							
+							<h2 class="colorlib-heading">Projects</h2>
+						</div>
+					</div>
+
+					<!-- Below our work and above pagination -->
+
+					<div class="row row-bottom-padded-md">
+						
+						{% for project in projects %}
+																			
+							<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">														
+								<div class="project"  >								
+										<a href="{{ project.get_url }}"><img class="project" src="{{ project.images.url }}" alt=""></a>
+											<!-- <h3><a href="{{ project.get_url }}">{{ project.project_name }}</a></h3> -->
+											<!-- <span>House, Apartment</span> -->
+											
+								</div>
+							</div>
+							
+							
+						{% endfor %}
+						
+						<!-- <div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url('{% static 'images/img-2.jpg' %}');">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 02</a></h3>
+										<span>House, Apartment</span>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url('{% static 'images/img-3.jpg' %}');">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 03</a></h3>
+										<span>Dining Room</span>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url('{% static 'images/img-4.jpg' %}');">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 04</a></h3>
+										<span>House, Building</span>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url('{% static 'images/img-5.jpg' %}');">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 05</a></h3>
+										<span>Condo, Pad</span>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url('{% static 'images/img-6.jpg' %}');">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 06</a></h3>
+										<span>Table, Chairs</span>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url('{% static 'images/img-7.jpg' %}');">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 02</a></h3>
+										<span>House, Apartment</span>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url('{% static 'images/img-8.jpg' %}');">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 03</a></h3>
+										<span>Dining Room</span>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url('{% static 'images/img-9.jpg' %}');">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 04</a></h3>
+										<span>House, Building</span>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url('{% static 'images/img-5.jpg' %}');">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="work.html">Work 05</a></h3>
+										<span>Condo, Pad</span>
+										
+									</div>
+								</div>
+							</div>
+						</div> -->
+					</div>
+
+					<!-- End Below our work and above pagination -->
+
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							{% if projects.has_other_pages %}
+							<ul class="pagination">
+								{% if projects.has_previous %}
+									<li class="active"><a href="?page={{projects.previous_page_number}}">&laquo;</a></li>
+								{% else %}
+									<li class="disabled"><a href="#">&laquo;</a></li>
+								{% endif %}
+
+								{% for i in projects.paginator.page_range %}
+									{% if projects.number == i %}
+										<li class="active"><a href="#">{{i}}</a></li>
+									{% else %}
+										<li class=""><a href="?page={{i}}">{{i}}</a></li>
+									{% endif %}	
+								{% endfor %}
+									{% if projects.has_next %}								
+										<li  class="active"><a href="?page={{projects.next_page_number}}">&raquo;</a></li>
+									{% else %}
+										<li class="disabled"><a href="#">&raquo;</a></li>
+									{% endif %}
+							</ul>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+			
+{% endblock content %}
+			
