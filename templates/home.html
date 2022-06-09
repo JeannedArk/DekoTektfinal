@@ -3,6 +3,8 @@
 
 
 {% block content %}
+
+<!-- side menu -->
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 			<div class="colorlib-footer">
 				
@@ -14,7 +16,7 @@
 				</ul>
 			</div>
 			<br>
-			<h1 id="colorlib-logo"><a href="{% url 'home' %}"> <img width="150px" height="75px" src="{% static 'images/DekoTektlogo.png' %}" alt=""> </a></h1>
+			<h1 id="colorlib-logo"><a href="{% url 'home' %}"> <img width="130px" height="65px" src="{% static 'images/DekoTektlogo.png' %}" alt=""> </a></h1>
 			
 			<nav id="colorlib-main-menu" role="navigation">
 				
@@ -24,13 +26,13 @@
 					<li><a href="{% url 'work' %}">Projects</a></li>
 					<li><a href="{% url 'about' %}">About</a></li>									
 					<li><a href="{% url 'contact' %}">Contact</a></li>
-				</ul>
-				
-			</nav>			
-			
-			
-
+				</ul>				
+			</nav>
 		</aside>
+
+<!-- End side menu -->
+
+<!-- slider -->
 		<div id="colorlib-main">
 			<aside id="colorlib-hero" class="js-fullheight">
 				<div class="flexslider js-fullheight">
@@ -39,14 +41,7 @@
 				   		<div class="overlay"></div>
 						<div class="container-fluid">
 							<div class="row">
-								<div class="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-									<!--Yellow Banner <div class="slider-text-inner">
-										<div class="desc">
-											<h1>An Inspiring Built Space</h1>
-											<h2>100% html5 bootstrap templates Made by <a href="https://colorlib.com/" target="_blank">colorlib.com</a></h2>
-												<p><a class="btn btn-primary btn-learn">View Project <i class="icon-arrow-right3"></i></a></p>
-											</div>
-									</div> -->
+								<div class="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 js-fullheight slider-text">									
 								</div>
 							</div>
 						</div>
@@ -56,13 +51,7 @@
 				   		<div class="container-fluid">
 				   			<div class="row">
 					   			<div class="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-					   				<div class="slider-text-inner">
-					   					<!--Yellow Banner <div class="desc">
-						   					<h1>Interior Design Studio</h1>
-												<h2>100% html5 bootstrap templates Made by <a href="https://colorlib.com/" target="_blank">colorlib.com</a></h2>
-												<p><a class="btn btn-primary btn-learn">View Project <i class="icon-arrow-right3"></i></a></p>
-											</div>
-					   				</div> -->
+					   				<div class="slider-text-inner">					   					
 					   			</div>
 					   		</div>
 				   		</div>
@@ -72,13 +61,7 @@
 				   		<div class="container-fluid">
 				   			<div class="row">
 					   			<div class="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-					   				<div class="slider-text-inner">
-					   					<!--Yellow Banner <div class="desc">
-						   					<h1>The National Gallery</h1>
-												<h2>100% html5 bootstrap templates Made by <a href="https://colorlib.com/" target="_blank">colorlib.com</a></h2>
-												<p><a class="btn btn-primary btn-learn">View Project <i class="icon-arrow-right3"></i></a></p>
-											</div>
-					   				</div> -->
+					   				<div class="slider-text-inner">					   					
 					   			</div>
 					   		</div>
 				   		</div>
@@ -86,9 +69,9 @@
 				  	</ul>
 			  	</div>
 			</aside>
-
+<!-- End slider -->
 			
-			
+<!-- Services -->			
 			<div class="colorlib-services">
 				<div class="colorlib-narrow-content">
 					<div class="row">
@@ -184,8 +167,10 @@
 					</div>
 				</div>
 			</div>
-			
-			<div id="colorlib-counter" class="colorlib-counters" style="background-image: url('{% static 'images/cover_bg_1.jpg' %}');" data-stellar-background-ratio="0.5">
+<!-- End Services -->
+
+<!-- Project numbers -->
+			<!-- <div id="colorlib-counter" class="colorlib-counters" style="background-image: url('{% static 'images/cover_bg_1.jpg' %}');" data-stellar-background-ratio="0.5">
 				<div class="overlay"></div>
 				<div class="colorlib-narrow-content">
 					<div class="row">
@@ -213,8 +198,10 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
+<!-- End Project numbers -->
 
+<!-- Recent Projects -->
 			<div class="colorlib-work">
 				<div class="colorlib-narrow-content">
 					<div class="row">
@@ -293,8 +280,9 @@
 					</div>
 				</div>
 			</div>
+<!-- End Recent Projects -->
 
-			
+<!-- About -->
 			<div class="colorlib-about">
 				<div class="colorlib-narrow-content">
 					<div class="row">
@@ -311,7 +299,7 @@
 							</div>
 							<div class="row padding">
 								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
-									<a  class="steps active">
+									<a  class="steps">
 										<p class="icon"><span><i class="icon-check"></i></span></p>
 										<h3>We are <br>pasionate</h3>
 									</a>
@@ -333,4 +321,5 @@
 					</div>
 				</div>
 			</div>
+<!-- End About -->
 {% endblock content %}

@@ -4,6 +4,7 @@
 
 
 {% block content %}
+<!-- Side Menu -->
 	<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 		<div class="colorlib-footer">
 			
@@ -15,7 +16,7 @@
 			</ul>
 		</div>
 		<br>
-		<h1 id="colorlib-logo"><a href="{% url 'home' %}"> <img width="150px" height="75px" src="{% static 'images/DekoTektlogo.png' %}" alt=""> </a></h1>
+		<h1 id="colorlib-logo"><a href="{% url 'home' %}"> <img width="130px" height="65px" src="{% static 'images/DekoTektlogo.png' %}" alt=""> </a></h1>
 		
 		<nav id="colorlib-main-menu" role="navigation">
 			
@@ -29,34 +30,32 @@
 			
 		</nav>
 	</aside>
-<div id="colorlib-main">
-	
-	<div class="colorlib-about">
-		
+<!-- End Side Menu -->
+
+<!-- Projects -->
+<div id="colorlib-main">	
+	<div class="colorlib-about">		
 		<div class="colorlib-narrow-content">
 			<div class="row">						
 				<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">					
 					<h2 class="colorlib-heading">Project Details</h2>
 				</div>
 			</div>
-
-			<div class="row row-bottom-padded-md">
-				<!-- Youtube block style="margin-right: 100%; margin-left: 20%; top: 50%; left: 50%;  width="560" height="315"-->
+<!-- Youtube -->
+			<div class="row row-bottom-padded-md">				
 				<div class="col-md-6 animate-box">
 					<div class="iframe-container">	
 					{% video single_project.video %}
 					</div>					
 				</div>
-				
-				
-				
-				<!-- End Youtube block -->
+<!-- Right Description -->
 				<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 					<div class="about-desc">							
 						<p>{{ single_project.description }}</p>						
 					</div>					
 				</div>
 			</div>
+<!-- Project Details info -->
 			<div class="row">
 				<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">					
 					<p><strong>Project Name:</strong> {{ single_project.project_name }}</p>
@@ -66,6 +65,7 @@
 					<p><strong>Design Phase:</strong> {{ single_project.design_phase }}</p>
 					<p><strong>Construction Phase:</strong> {{ single_project.construction_phase }}</p>
 				</div>
+<!-- Project main photo -->
 				<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">																		
 					<div class="project"  >	
 						<div class="fancylight popup-btn" data-fancybox-group="light">							
@@ -79,70 +79,22 @@
 		</div>
 	</div>
 	
-	
+<!-- Project photos -->	
 	<div id="colorlib-counter" class="row row-bottom-padded-md" >
 		<div class="row"> 
 			<div class="colorlib-narrow-content">       
-			<div class="row row-bottom-padded-md">
-			{% for i in project_gallery %}
-			<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-				<div class="project">
-					<a href="{{ i.image.url }}" class="fancylight popup-btn" data-fancybox-group="light"> 
-					<img class="project" src="{{ i.image.url }}" alt="">
-				</a>
-			</div>
-			</div>
-			{% endfor %}			         
-			</div>
+				<div class="row row-bottom-padded-md">
+				{% for i in project_gallery %}
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+						<div class="project">
+							<a href="{{ i.image.url }}" class="fancylight popup-btn" data-fancybox-group="light"> 
+							<img class="project" src="{{ i.image.url }}" alt="">
+							</a>
+						</div>
+					</div>
+				{% endfor %}			         
+				</div>
 			</div> 
-		</div> 
-		
-		<!-- <div class="colorlib-narrow-content">
-			<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">														
-				<div class="project"  >								
-						<a href="#"><img class="project" src="{% static 'images/img-3.jpg' %}" alt=""></a>
-							<!-- <h3><a href="{{ project.get_url }}">{{ project.project_name }}</a></h3> -->
-							<!-- <span>House, Apartment</span> 
-				</div>
-			</div>
-			<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">														
-				<div class="project"  >								
-						<a href="#"><img class="project" src="{% static 'images/img-3.jpg' %}" alt=""></a>
-							<!-- <h3><a href="{{ project.get_url }}">{{ project.project_name }}</a></h3> -->
-							<!-- <span>House, Apartment</span> 
-				</div>
-			</div>
-			<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">														
-				<div class="project"  >								
-						<a href="#"><img class="project" src="{% static 'images/img-3.jpg' %}" alt=""></a>
-							<!-- <h3><a href="{{ project.get_url }}">{{ project.project_name }}</a></h3> -->
-							<!-- <span>House, Apartment</span> 
-				</div>
-			</div>
-			<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">														
-				<div class="project"  >								
-						<a href="#"><img class="project" src="{% static 'images/img-3.jpg' %}" alt=""></a>
-							<!-- <h3><a href="{{ project.get_url }}">{{ project.project_name }}</a></h3> -->
-							<!-- <span>House, Apartment</span>
-				</div>
-			</div>
-			<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">														
-				<div class="project"  >								
-						<a href="#"><img class="project" src="{% static 'images/img-3.jpg' %}" alt=""></a>
-							<!-- <h3><a href="{{ project.get_url }}">{{ project.project_name }}</a></h3> -->
-							<!-- <span>House, Apartment</span> 
-				</div>
-			</div>
-			<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">														
-				<div class="project"  >								
-						<a href="#"><img class="project" src="{% static 'images/img-3.jpg' %}" alt=""></a>
-							<!-- <h3><a href="{{ project.get_url }}">{{ project.project_name }}</a></h3> -->
-							<!-- <span>House, Apartment</span>
-				</div>
-			</div>
-		</div> -->
+		</div>
 	</div>
-
-{% endblock content %}
-			
-	
+{% endblock content %}	
