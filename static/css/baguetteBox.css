@@ -37,7 +37,7 @@
       max-height: 100%;
       max-width: 100%;
       align-items: center;
-      vertical-align: middle !important;
+      vertical-align: middle;
       -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
          -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
               box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
@@ -58,7 +58,8 @@
       display: inline-block;
       height: 50%;
       width: 1px;
-      margin-right: -1px; }
+      margin-right: -1px;
+      vertical-align: middle; }
 
 #baguetteBox-slider {
   position: absolute;

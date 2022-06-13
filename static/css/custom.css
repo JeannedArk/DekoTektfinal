@@ -1,34 +1,41 @@
-#baguetteBox-overlay .full-image img {
-  margin-top: 200px;
-  display: inline-block;
-  width: auto;
-  height: auto;
-  max-height: 100%;
-  max-width: 100%;
-  
-  
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-     -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
 
+#baguetteBox-overlay .full-image {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+  #baguetteBox-overlay .full-image figure {
+    display: inline;
+    margin: 0;
+    height: 100%; }
+  #baguetteBox-overlay .full-image img {
+    
+    margin-top: 150px;
+    display: inline;
+    vertical-align: middle;
+    
+    
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+        -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
+  
+           
 .iframe-container{
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%;     
     height: 0;
-    
-  }
-  .iframe-container iframe{
+}
+  
+.iframe-container iframe{
     position: absolute;
     top:0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
-
-  
-
-  
+}
+ 
 a {
   color: #c17d3d;
   -webkit-transition: 0.5s;
