@@ -6255,22 +6255,3 @@ button.close {
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
-
-/* new */
-body_gallary{
-	margin:0;
-	padding:0;
-}
-/* .container{
-	width:90%
-	margin:10px auto;
-} */
-
-.portfolio-item{
-	/*width:100%;*/
-}
-.portfolio-item .item{
-	/*width:303px;*/
-	float:left;
-	margin-bottom:10px;
-}

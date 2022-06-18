@@ -7,7 +7,7 @@ from embed_video.fields import EmbedVideoField
 class Project(models.Model):
     project_name = models.CharField(max_length=200,unique=True)
     slug         = models.SlugField(max_length=200,unique=True)           
-    images       = models.ImageField(upload_to='media/Projects')    
+    images       = models.ImageField(upload_to='Projects')    
     is_available = models.BooleanField(default=True)    
     created_date = models.DateTimeField(auto_now_add=True)
     modified_date = models.DateTimeField(auto_now=True)
@@ -39,7 +39,7 @@ class Contact(models.Model):
 
 class ProjectGallery(models.Model):
     project = models.ForeignKey(Project, default=None, on_delete=models.CASCADE)
-    image= models.ImageField(upload_to='media/Project_details', max_length=255)  
+    image= models.ImageField(upload_to='Project_details', max_length=255)  
 
     
 

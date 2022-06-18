@@ -9,8 +9,8 @@
 		<div class="colorlib-footer">
 			
 			<ul class="list-inline text-center">
-				<li><a href="#"><i class="icon-facebook2"></i></a></li>
-				<li><a href="#"><i class="icon-youtube"></i></a></li>					
+				<li><a href="https://www.facebook.com/DekoTekt-103378382072498"><i class="icon-facebook2"></i></a></li>
+				<li><a href="https://www.youtube.com/channel/UC6RtLZQGnYObdOTE4AhRdLQ/featured"><i class="icon-youtube"></i></a></li>					
 				<li><a href="#"><i class="icon-instagram"></i></a></li>					
 				
 			</ul>
@@ -42,7 +42,7 @@
 		</div>
 <!-- Youtube -->
 		<div class="row row-bottom-padded-md">				
-			<div class="col-md-6 animate-box">
+			<div class="col-md-6 ">
 				<div class="iframe-container">	
 				{% video single_project.video  %}
 				</div>					
@@ -56,7 +56,7 @@
 		</div>
 <!-- Project Details info -->
 		<div class="row row-bottom-padded-md">
-			<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">					
+			<div class="col-md-6 " data-animate-effect="fadeInLeft">					
 				<p><strong>Project Name:</strong> {{ single_project.project_name }}</p>
 				<p><strong>Year:</strong> {{ single_project.year }}</p>										
 				<p><strong>Country:</strong> {{ single_project.country }}</p>
@@ -67,7 +67,7 @@
 <!-- Project main photo -->
 			<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">								
 				<a class="lightbox" href="{{ single_project.images.url }}" >						
-						<img  class="project" style="border-radius: 10px;" src="{{ single_project.images.url }}" alt="">						
+						<img  class="project"  src="{{ single_project.images.url }}" alt="">						
 				</a>												
 			</div>				
 		</div>

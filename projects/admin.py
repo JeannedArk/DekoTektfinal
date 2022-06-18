@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Project, ProjectGallery
 import admin_thumbnails
-from embed_video.admin import AdminVideoMixin   
+   
 
 @admin_thumbnails.thumbnail('image')
 class ProjectGalleryInline(admin.TabularInline):

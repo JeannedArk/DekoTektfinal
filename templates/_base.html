@@ -51,11 +51,11 @@
 	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
-		
+	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
 	
-	
+	<!-- Gallery -->
 	<link rel="stylesheet" href="{% static 'css/baguetteBox.min.css' %}">
-	<link rel="stylesheet" href="{% static 'css/custom.css' %}">	
+		
 
 	<!-- Modernizr JS -->
 	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
@@ -85,7 +85,7 @@
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
 							<p class="colorlib-lead">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							<p><a href="#" class="btn btn-primary btn-learn">Contact me!</a></p>
+							<p><a href="{% url 'contact' %}" class="btn btn-primary btn-learn">Contact me!</a></p>
 						</div>
 						
 					</div>
@@ -110,15 +110,17 @@
 	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
 	<!-- Counters -->
 	<script src="{% static 'js/jquery.countTo.js' %}"></script>
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 	
 	<!-- MAIN JS -->
 	<script src="{% static 'js/main.js' %}"></script>	
 	
+	<!-- Gallery -->
 	<script src="{% static 'js/baguetteBox.min.js' %}" ></script>
 	<script>
 		baguetteBox.run('.tz-gallery');
-	</script>
+	</script>	
+		
 	</body>
 </html>
 

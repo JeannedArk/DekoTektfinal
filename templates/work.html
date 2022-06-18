@@ -5,6 +5,14 @@
 {% block content %}
 <!-- side menu -->
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+			<div class="colorlib-footer">
+				<ul class="list-inline text-center">
+					<li ><a href="https://www.facebook.com/DekoTekt-103378382072498"><i class="icon-facebook2"></i></a></li>
+					<li><a href="https://www.youtube.com/channel/UC6RtLZQGnYObdOTE4AhRdLQ/featured"><i class="icon-youtube"></i></a></li>					
+					<li><a href="#"><i class="icon-instagram"></i></a></li>
+				</ul>
+			</div>
+			<br>
 			<h1 id="colorlib-logo"><a href="{% url 'home' %}"> <img width="130px" height="65px" src="{% static 'images/DekoTektlogo.png' %}" alt=""> </a></h1>			
 			<nav id="colorlib-main-menu" role="navigation">				
 				<ul>
@@ -15,13 +23,7 @@
 					<li><a href="{% url 'contact' %}">Contact</a></li>
 				</ul>				
 			</nav>			
-			<div class="colorlib-footer">
-				<ul class="list-inline text-center">
-					<li ><a href="#"><i class="icon-facebook2"></i></a></li>
-					<li><a href="#"><i class="icon-youtube"></i></a></li>					
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
-				</ul>
-			</div>
+			
 		</aside>
 <!-- End side menu -->
 
