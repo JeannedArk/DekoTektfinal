@@ -57,7 +57,7 @@
 									<i class="icon-map"></i>
 								</div>
 								<div class="colorlib-text">
-									<p>198 West 21th Street, Suite 721 New York NY 10016</p>
+									<p>Wilhelm-Marx-Straße 24, Nürnberg</p>
 								</div>
 							</div>
 
@@ -66,7 +66,7 @@
 									<i class="icon-phone"></i>
 								</div>
 								<div class="colorlib-text">
-									<p><a href="tel://">+123 456 7890</a></p>
+									<p><a href="tel://">+49 157 5303 2836</a></p>
 								</div>
 							</div>
 						</div>
@@ -78,19 +78,19 @@
 										
 										{% csrf_token %}
 										<div class="form-group">
-											<input name="name" type="text" class="form-control" placeholder="Your Full Name" required>
+											<input name="name" type="text" class="form-control" placeholder="voller Name" required>
 										</div>
 										<div class="form-group">
-											<input name="email" type="text" class="form-control" placeholder="Your Email" required>
+											<input name="email" type="text" class="form-control" placeholder="Ihr Email" required>
 										</div>
 										<div class="form-group">
-											<input name="subject" type="text" class="form-control" placeholder="Subject" required>
+											<input name="subject" type="text" class="form-control" placeholder="Betreff" required>
+										</div>				
+										<div class="form-group">
+											<textarea name="message"  cols="30" rows="7" class="form-control" placeholder="Nachricht" required></textarea>
 										</div>
 										<div class="form-group">
-											<textarea name="message"  cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
-										</div>
-										<div class="form-group">
-											<input  type="submit" class="btn btn-primary btn-send-message" value="Send Message">
+											<input  type="submit" class="btn btn-primary btn-send-message" value="Senden">
 										</div>
 										
 									</form>

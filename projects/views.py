@@ -52,8 +52,6 @@ def contact(request):
         send_mail(subject,message,[name, email],['a.shalapi@dekotekt.com'], fail_silently=False)
         if email_check:
             messages.success(request, 'Contact request submitted successfully.')           
-        
-        
 
     return render(request, 'contact.html')
 

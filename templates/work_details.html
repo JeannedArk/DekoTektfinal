@@ -50,7 +50,7 @@
 <!-- Right Description -->
 			<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 				<div class="about-desc">							
-					<p>{{ single_project.description }}</p>						
+					<p>{{ single_project.description|linebreaks }}</p>						
 				</div>					
 			</div>
 		</div>
@@ -65,10 +65,8 @@
 				<p><strong>Construction Phase:</strong> {{ single_project.construction_phase }}</p>
 			</div>
 <!-- Project main photo -->
-			<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">								
-				<a class="lightbox" href="{{ single_project.images.url }}" >						
-						<img  class="project"  src="{{ single_project.images.url }}" alt="">						
-				</a>												
+			<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">	
+				<img  class="project" style="height:350px ;" src="{{ single_project.images.url }}" alt="">
 			</div>				
 		</div>
 	</div>		
@@ -88,14 +86,14 @@
 					<div class="row">
 						{% for i in project_gallery %}
 							<div class="col-sm-6 col-md-4" >
-								<a class="lightbox" style="vertical-align: middle;" href="{{ i.image.url }}">
-									<img src="{{ i.image.url }}" alt="Park">
+								<a  class="lightbox"  href="{{ i.image.url }}">									
+									<img src="{{ i.image.url }}" alt="Park">									
 								</a>
 							</div> 						
 						{% endfor %}
 					</div> 			         
 				</div>
 			</div> 
-		</div>	
+		</div>
 	
 {% endblock content %}	

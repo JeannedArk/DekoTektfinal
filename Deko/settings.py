@@ -1,5 +1,6 @@
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -142,11 +143,27 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 DEFAULT_FROM_EMAIL = 'admin@Dekotekt.com'
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.ionos.com"
+EMAIL_PORT = 465
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
-EMAIL_PORT = 587
+#EMAIL_USE_SSL = True
 EMAIL_HOST_USER = "a.shalapi@dekotekt.com'"
-EMAIL_HOST_PASSWORD = ""
+EMAIL_HOST_PASSWORD = "B$Yarmuk21!dt"
+
+
+# SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
+
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
+# EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+
+
+
+# EMAIL_HOST = 'smtp.mailtrap.io'
+# EMAIL_HOST_USER = 'd9d0bac4403df6'
+# EMAIL_HOST_PASSWORD = 'a061ff9920f1ba'
+# EMAIL_PORT = '2525'
 
 # HTTPS settings makes sure that your cookies and all your traffic are done through https
 # SESSION_COOKIE_SECURE = True

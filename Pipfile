@@ -6,9 +6,10 @@ name = "pypi"
 [packages]
 django = "*"
 psycopg2-binary = "*"
-pillow = "*"
-django-admin-thumbnails = "*"
+pillow = "==9.1.1"
+django-admin-thumbnails = "==0.2.6"
 django-embed-video = "*"
+sendgrid-django = "*"
 
 [dev-packages]
 
