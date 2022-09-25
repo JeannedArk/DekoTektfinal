@@ -47,9 +47,10 @@ def contact(request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         subject = request.POST.get('subject')
-        message = request.POST.get('message')         
+        message = request.POST.get('message')
+        client=[name,email]         
         email_check = email
-        send_mail(subject,message,[name, email],['a.shalapi@dekotekt.com'], fail_silently=False)
+        send_mail(subject,message, "/".join(client),['a.shalapi@dekotekt.com'], fail_silently=False)
         if email_check:
             messages.success(request, 'Contact request submitted successfully.')           
 
